@@ -15,10 +15,10 @@ import React from "react";
 // use the array to populate the rows w/member info
 // leave the # coloumn alone for now...
 // add placeholder images
-function Company() {
+function Company(props) {
 return (
     <div>
-        <h1>Meet the Members of Mystery Inc.</h1>
+        {/* <h1>Meet the Members of Mystery Inc.</h1> */}
       <table className="table">
   <thead className="thead-dark">
     <tr>
@@ -34,25 +34,23 @@ return (
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Placeholder image</td>
-      <td>Norville Rogers</td>
-      <td>Shaggy</td>
-      <td>submarine Sandwich</td>
-      <td>green</td>
-      <td>shagtheshag@mi.com</td>
+      <td>{props.image}</td>
+      <td>{props.name}</td>
+      <td>{props.nickname}</td>
+      <td>{props.snack}</td>
+      <td>{props.color}</td>
+      <td>{props.email}</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>{props.image}</td>
+      <td>{props.name}</td>
+      <td>{props.nickname}</td>
+      <td>{props.snack}</td>
+      <td>{props.color}</td>
+      <td>{props.email}</td>
     </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    
   </tbody>
 </table>
 
