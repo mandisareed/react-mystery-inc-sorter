@@ -1,5 +1,6 @@
 import React from "react";
 import Company from "./components/Company";
+import Header from "./components/Header";
 import members from "./members.json";
 
 class App extends React.Component {
@@ -10,6 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Header />
         {this.state.members.map((character) => (
           <Company
             id={character.id}
@@ -26,9 +28,5 @@ class App extends React.Component {
     );
   }
 }
-
-// function App() {
-//   return <Company />
-// }
 
 export default App;
