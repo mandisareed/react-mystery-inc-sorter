@@ -1,13 +1,11 @@
-import React from 'react';
+import React from "react";
+import Company from "./components/Company";
+// import members from "./members.json";
 
 
 
 function App() {
-  return (
-    <div>
-     "What's up!"
-    </div>
-  );
+  return <Company />
 }
 
 export default App;
