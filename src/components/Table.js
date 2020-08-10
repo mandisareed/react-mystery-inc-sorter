@@ -1,24 +1,10 @@
 import React from "react";
-import "../styles/Company.css";
 import members from "../members.json";
+// my API key MKGY-XP0C-SVFS-5YKX
 
-
-//TO-DO
-// utilize bootstrap to create a table containing column titles:
-// image (perhaps leave the text field blank)
-// name
-// favorite snack
-// power color
-// email
-
-// Step 2:
-// Fill in one row w/dummy data
-// Create an array of Mystery Inc members
-// use the array to populate the rows w/member info
-// leave the # coloumn alone for now...
-// add placeholder images
-class Company extends React.Component {
+class Table extends React.Component {
   state = {
+    members,
     order: "ascending"
   };
 
@@ -28,9 +14,13 @@ class Company extends React.Component {
     });
   };
 
- 
-  
-  render () {
+  sortByName = () => {
+    this.setState({
+      order: this.state.order === "ascending" ? "descending" : "ascending",
+    });
+  };
+
+  render() {
 
     const sortedIDs = members.sort((a, b) => {
       if (a.id === b.id) {
@@ -48,15 +38,27 @@ class Company extends React.Component {
       return -1;
     });
 
+
     return (
-    <div>   
-      <table className="table">
+    <div>
+           <table className="table">
+           <thead className="thead-dark">
+    <tr>
+      <th scope="col" onClick={this.sortByID} >#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Nickname</th>
+      <th scope="col">Favorite Snack</th>
+      <th scope="col">Power Color</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  
+
   <tbody>
     {sortedIDs.map((charID) => (
     <tr itemScope="row" className="main" key={charID.id}>
       
-      <td onClick={this.sortByID}>{charID.id}</td>
-      {/* <td>{charID.image}</td> */}
+      <td>{charID.id}</td>
       <td>{charID.name}</td>
       <td>{charID.nickname}</td>
       <td>{charID.snack}</td>
@@ -66,13 +68,11 @@ class Company extends React.Component {
     ))}
       
   </tbody>
-</table>
-
-    </div>
-)}
-
+  </table>
+    </div>)}
+  
+  
+    
 }
 
-export default Company;
-
-// my API key MKGY-XP0C-SVFS-5YKX
+export default Table;

@@ -1,7 +1,8 @@
 import React from "react";
-// import Company from "./components/Company";
-import Header from "./components/Header";
+import Table from "./components/Table";
 import members from "./members.json";
+import Header from "./components/Header";
+import SearchInput from "./components/SearchInput";
 
 class App extends React.Component {
   state = {
@@ -11,20 +12,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header
-        />
-        {/* {this.state.members.map((character) => ( */}
-          {/* <Company
-            // id={character.id}
-            // key={character.id}
-            // name={character.name}
-            // nickname={character.nickname}
-            // image={character.image}
-            // snack={character.snack}
-            // color={character.color}
-            // email={character.email}
-          /> */}
-        {/* ))} */}
+        <Header />
+        <SearchInput />
+        <Table />
       </div>
     );
   }

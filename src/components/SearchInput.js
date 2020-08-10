@@ -1,28 +1,31 @@
 import React from "react";
 
-
-class SearchButton extends React.Component {
+//TODO
+// center the search input box on the page
+// get the value of the search input
+  //console.log this
+class SearchInput extends React.Component {
     state = {
         search: ""
     };
 
 
     render () {
+      console.log(this.state.search);
          return (
       <div>
         <form className="form">
           <input
-            value={this.state.lastName}
+            value={this.state.search}
             name="lastName"
             onChange={this.handleInputChange}
             type="text"
             placeholder="Search by Color"
           />
-          <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
       </div>
     );}
    
   }
 
-  export default SearchButton;
+  export default SearchInput;
