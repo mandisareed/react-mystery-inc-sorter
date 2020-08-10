@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Table from "./components/Table";
-import members from "./members.json";
 import Header from "./components/Header";
 import SearchInput from "./components/SearchInput";
+import members from "./members.json"
 
-class App extends React.Component {
-  state = {
-    members,
-  };
-
-  render() {
+function App() {
+  const [search, setSearch] = useState("");
+  let char = members;
+  if (search === "") {
+    char = members;
+  } 
+  else {
+    char = members.filter((c) => {
+      return c.color.includes(search);
+    });
+  }
     return (
       <div>
         <Header />
-        <SearchInput />
+        <SearchInput 
+        value={search}
+        onChange={(event) => setSearch(event.target.value)}
+        />
         <Table />
       </div>
     );
-  }
+  
 }
 
 export default App;
