@@ -3,7 +3,7 @@
       "id": 1,
       "name": "Scooby Doo",
       "nickname": "Scoob",
-      "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+      "image": "IMG",
       "snack": "Scooby Snacks",
       "color": "sepia",
       "email": "roobyroo@mi.com"
@@ -12,7 +12,7 @@
         "id": 2,
         "name": "Norville Rogers",
         "nickname": "Shaggy",
-        "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "image": "IMG",
         "snack": "submarine sandwich",
         "color": "green",
         "email": "shagtheshag@mi.com"
@@ -21,7 +21,7 @@
         "id": 3,
         "name": "Daphne Blake",
         "nickname": "Danger-Prone",
-        "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "image": "IMG",
         "snack": "granny smith apple",
         "color": "purple",
         "email": "sveltebydefault@mi.com"
@@ -30,7 +30,7 @@
         "id": 4,
         "name": "Velma Dinkley",
         "nickname": "Danger-Prone",
-        "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "image": "IMG",
         "snack": "gingersnap cookies",
         "color": "orange",
         "email": "spexandbrains@mi.com"
@@ -39,7 +39,7 @@
         "id": 5,
         "name": "Fred Jones",
         "nickname": "The Man",
-        "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
+        "image": "IMG",
         "snack": "banana chips",
         "color": "crimson",
         "email": "keepinupwiththejones@mi.com"

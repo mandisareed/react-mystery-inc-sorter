@@ -1,4 +1,6 @@
 import React from "react";
+import "../styles/Company.css";
+import members from "../members.json";
 
 
 //TO-DO
@@ -15,25 +17,61 @@ import React from "react";
 // use the array to populate the rows w/member info
 // leave the # coloumn alone for now...
 // add placeholder images
-function Company(props) {
-return (
+class Company extends React.Component {
+  state = {
+    order: "ascending"
+  };
+
+  sortByID = () => {
+    this.setState({
+      order: this.state.order === "ascending" ? "descending" : "ascending",
+    });
+  };
+
+ 
+  
+  render () {
+
+    const sortedIDs = members.sort((a, b) => {
+      if (a.id === b.id) {
+        return 0;
+      }
+      if (this.state.order === "ascending") {
+        if (a.id < b.id) {
+          return -1;
+        }
+        return 1;
+      }
+      if (a.id < b.id) {
+        return 1;
+      }
+      return -1;
+    });
+
+    return (
     <div>   
       <table className="table">
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>{props.image}</td>
-      <td>{props.name}</td>
-      <td>{props.nickname}</td>
-      <td>{props.snack}</td>
-      <td>{props.color}</td>
-      <td>{props.email}</td>
-    </tr>    
+    {sortedIDs.map((charID) => (
+    <tr itemScope="row" className="main" key={charID.id}>
+      <td onClick={this.sortByID}>{charID.id}</td>
+      {/* <td>{charID.image}</td> */}
+      <td>{charID.name}</td>
+      <td>{charID.nickname}</td>
+      <td>{charID.snack}</td>
+      <td>{charID.color}</td>
+      <td>{charID.email}</td> 
+    </tr> 
+    ))}
+      
   </tbody>
 </table>
 
     </div>
-)
+)}
+
 }
 
 export default Company;
+
+// my API key MKGY-XP0C-SVFS-5YKX

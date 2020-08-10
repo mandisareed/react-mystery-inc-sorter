@@ -12,18 +12,18 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        {this.state.members.map((character) => (
+        {/* {this.state.members.map((character) => ( */}
           <Company
-            id={character.id}
-            key={character.id}
-            name={character.name}
-            nickname={character.nickname}
-            image={character.image}
-            snack={character.snack}
-            color={character.color}
-            email={character.email}
+            // id={character.id}
+            // key={character.id}
+            // name={character.name}
+            // nickname={character.nickname}
+            // image={character.image}
+            // snack={character.snack}
+            // color={character.color}
+            // email={character.email}
           />
-        ))}
+        {/* ))} */}
       </div>
     );
   }
