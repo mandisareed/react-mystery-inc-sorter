@@ -11,7 +11,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header
+        />
         {/* {this.state.members.map((character) => ( */}
           {/* <Company
             // id={character.id}
