@@ -1,5 +1,5 @@
 import React from "react";
-import Company from "./components/Company";
+// import Company from "./components/Company";
 import Header from "./components/Header";
 import members from "./members.json";
 
@@ -13,7 +13,7 @@ class App extends React.Component {
       <div>
         <Header />
         {/* {this.state.members.map((character) => ( */}
-          <Company
+          {/* <Company
             // id={character.id}
             // key={character.id}
             // name={character.name}
@@ -22,7 +22,7 @@ class App extends React.Component {
             // snack={character.snack}
             // color={character.color}
             // email={character.email}
-          />
+          /> */}
         {/* ))} */}
       </div>
     );

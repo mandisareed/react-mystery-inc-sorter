@@ -54,6 +54,7 @@ class Company extends React.Component {
   <tbody>
     {sortedIDs.map((charID) => (
     <tr itemScope="row" className="main" key={charID.id}>
+      
       <td onClick={this.sortByID}>{charID.id}</td>
       {/* <td>{charID.image}</td> */}
       <td>{charID.name}</td>

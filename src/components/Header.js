@@ -1,13 +1,44 @@
 import React from "react";
+import members from "../members.json";
 
-function Header() {
+class Header extends React.Component {
+  state = {
+    members,
+    order: "ascending"
+  };
+
+  sortByID = () => {
+    this.setState({
+      order: this.state.order === "ascending" ? "descending" : "ascending",
+    });
+  };
+
+  render() {
+
+    const sortedIDs = members.sort((a, b) => {
+      if (a.id === b.id) {
+        return 0;
+      }
+      if (this.state.order === "ascending") {
+        if (a.id < b.id) {
+          return -1;
+        }
+        return 1;
+      }
+      if (a.id < b.id) {
+        return 1;
+      }
+      return -1;
+    });
+
+
     return (
     <div>
            <h1>Meet the Members of Mystery Inc.</h1>
            <table className="table">
            <thead className="thead-dark">
     <tr>
-      <th scope="col">#</th>
+      <th scope="col" onClick={this.sortByID} >#</th>
       {/* <th scope="col">Image</th> */}
       <th scope="col">Name</th>
       <th scope="col">Nickname</th>
@@ -16,8 +47,27 @@ function Header() {
       <th scope="col">Email</th>
     </tr>
   </thead>
+  
+
+  <tbody>
+    {sortedIDs.map((charID) => (
+    <tr itemScope="row" className="main" key={charID.id}>
+      
+      <td>{charID.id}</td>
+      {/* <td>{charID.image}</td> */}
+      <td>{charID.name}</td>
+      <td>{charID.nickname}</td>
+      <td>{charID.snack}</td>
+      <td>{charID.color}</td>
+      <td>{charID.email}</td> 
+    </tr> 
+    ))}
+      
+  </tbody>
   </table>
-    </div>)
+    </div>)}
+  
+  
     
 }
 
