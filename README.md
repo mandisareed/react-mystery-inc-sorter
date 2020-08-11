@@ -6,7 +6,7 @@ This React app sorts the Mystery Inc. members, and allows users to filter charac
 
 [Check out the deployed app!](https://mandisareed.github.io/react-mystery-inc-sorter/)
 
-![Homepage](/homepg.PNG)
+![Homepage](./homepg.PNG)
 
 This project was developed with [Create React App](https://github.com/facebook/create-react-app).
 
