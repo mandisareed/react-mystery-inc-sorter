@@ -4,9 +4,11 @@
 ## Description
 This React app sorts the Mystery Inc. members, and allows users to filter characters based on their favorite color. More characters in the world of Scooby and the gang to come!
 
-[Check out the deployed app!](https://mandisareed.github.io/react-mystery-inc-sorter/).
+[Check out the deployed app!](https://mandisareed.github.io/react-mystery-inc-sorter/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Homepage](/homepg.PNG)
+
+This project was developed with [Create React App](https://github.com/facebook/create-react-app).
 
 
 
