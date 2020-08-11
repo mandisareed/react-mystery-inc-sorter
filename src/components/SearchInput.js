@@ -1,28 +1,12 @@
 import React from "react";
 
-//TODO
-// center the search input box on the page
-// get the value of the search input
-//  console.log this
-//filter the results in the table by
-// what matches the value of the input box
+
+// the SearchInput component takes in 2 params: onChange and value
+// these are wrapped in curly braces because of object destructuring!
+// from App.js, these properties are turned into objects.
+// instead of passing onChange and value as params WITHOUT curly braces and thus needing to use 'props.onChange' + 'props.value',
+// the code is cleaner, and we can simply pass these values as 'onChange' and 'value' (lines 23 + 25)
 function SearchInput ({onChange, value}) {
-  // state = {
-  //   search: "",
-  // };
-
-  // handleInputChange = (event) => {
-  //   // Getting the value of the input which triggered the change
-  //   const { name, value } = event.target;
-
-  //   // Updating the input's state
-  //   this.setState({
-  //     [name]: value,
-  //   });
-  // };
-
-  // render() {
-    console.log({value});
     return (
       <div>
         <form className="form">
@@ -36,7 +20,6 @@ function SearchInput ({onChange, value}) {
         </form>
       </div>
     );
-  // }
-}
+  }
 
 export default SearchInput;
