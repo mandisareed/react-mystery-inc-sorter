@@ -7,12 +7,6 @@ This React app sorts the Mystery Inc. members, and allows users to filter charac
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-[Check out the deployed app!](https://agile-citadel-81951.herokuapp.com/)
-
-![Beginning Tracker](/img/emptytracker.PNG)
-![In-Progress](/img/exampletracker.PNG)
-
-
 
 ## Table of Contents
 * [Installation](https://github.com/mandisareed/cli-nodejs/blob/master/readme.md#installation)
